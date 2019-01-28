@@ -8,16 +8,24 @@ end
 
 def get_contestant_name(data, occupation)
   data.each do |season, people|
-    people.each do |data|
-      if data["occupation"] == occupation
-        return data["name"]
+    people.each do |inner_data|
+      if inner_data["occupation"] == occupation
+        return inner_data["name"]
       end
     end
   end
 end
 
 def count_contestants_by_hometown(data, hometown)
-  # code here
+  tally = nil
+  data.each do |season, people|
+    people.each do |inner_data|
+      if inner_data["hometown"] = hometown
+        tally += 1
+      end
+    end
+  end
+  tally
 end
 
 def get_occupation(data, hometown)
