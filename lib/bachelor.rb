@@ -39,5 +39,9 @@ def get_occupation(data, hometown)
 end
 
 def get_average_age_for_season(data, season)
-  # code here
+  ages = []
+  data[season].each do |inner_data|
+    ages << inner_data["age"]
+  end
+  ages.inject(0.0) {|sum, el| sum + el} /ages.length
 end
