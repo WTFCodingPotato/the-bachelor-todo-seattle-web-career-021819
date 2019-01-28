@@ -5,6 +5,8 @@ def get_first_name_of_season_winner(data, season)
     if seasons == season
       return attribute
       binding.pry
+    end
+  end
 end
 
 def get_contestant_name(data, occupation)
