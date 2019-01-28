@@ -17,7 +17,7 @@ def get_contestant_name(data, occupation)
 end
 
 def count_contestants_by_hometown(data, hometown)
-  tally = nil
+  tally = 0
   data.each do |season, people|
     people.each do |inner_data|
       if inner_data["hometown"] = hometown
