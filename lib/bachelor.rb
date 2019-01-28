@@ -41,7 +41,7 @@ end
 def get_average_age_for_season(data, season)
   ages = []
   data[season].each do |inner_data|
-    ages << inner_data["age"]
+    ages << inner_data["age"].to_i
   end
   ages.inject(0.0) {|sum, el| sum + el} /ages.length
 end
